@@ -1,39 +1,37 @@
 {% extends "base.html" %}
 
+{% block title %}Home{% endblock title %}
+
 {% block content %}
-	<div class="container">
-		<div class="row">
-			<div class="column profile">
-				<h1>Sam Bowden</h1>
+	<div class="column profile">
+		<h1>Sam Bowden</h1>
 
-				<img src="profile.png" class="profile_picture"\>
+		<img src="profile.png" class="profile_picture"\>
 
-				<h2>About me</h2>
+		<h2>About me</h2>
 
-				<p>I'm currently a 3rd year computer science student at the University of Leicester.
-				I'm passionate about FOSS, Linux and programming language theory.
-				For my final year project at university,
-				I'm developing an interpreter in Rust for a novel scripting language, Zonkey.
-				</p>
+		<p>I'm currently a 3rd year computer science student at the University of Leicester.
+		I'm passionate about FOSS, Linux and programming language theory.
+		For my final year project at university,
+		I'm developing an interpreter in Rust for a novel scripting language, Zonkey.
+		</p>
 
-				<h2>Links</h2>
-				<a href="https://codeberg.org/Sam-Bowden">Codeberg</a>
-				<a href="https://github.com/Sam-Bowden">GitHub</a>
+		<h2>Links</h2>
+		<a href="https://codeberg.org/Sam-Bowden">Codeberg</a>
+		<a href="https://github.com/Sam-Bowden">GitHub</a>
 
-				<p>Feel free to contact me at:
-				<a href="mailto:samuel.bowden1@protonmail.com">samuel.bowden1@protonmail.com</a>
-				</p>
+		<p>Feel free to contact me at:
+		<a href="mailto:samuel.bowden1@protonmail.com">samuel.bowden1@protonmail.com</a>
+		</p>
+	</div>
+	<div class="column posts">
+		<h1>Posts</h1>
+		{% set section = get_section(path="posts/_index.md") %}
+		{% for post in section.pages %}
+			<div class="post">
+				{{ post.date }}<br>
+				<a href="{{ post.permalink | safe }}">{{ post.title }}</a></p>
 			</div>
-			<div class="column posts">
-				<h1>Posts</h1>
-				{% set section = get_section(path="posts/_index.md") %}
-				{% for post in section.pages %}
-					<div class="post">
-						{{ post.date }}<br>
-						<a href="{{ post.permalink | safe }}">{{ post.title }}</a></p>
-					</div>
-				{% endfor %}
-			</div>
-		</div>
+		{% endfor %}
 	</div>
 {% endblock content %}
