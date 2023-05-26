@@ -17,18 +17,19 @@
 		</p>
 
 		<h2>Links</h2>
-		<a href="https://codeberg.org/Sam-Bowden">Codeberg</a>
 		<a href="https://github.com/Sam-Bowden">GitHub</a>
+		<a href="https://codeberg.org/Sam-Bowden">Codeberg</a>
+		<a href="https://exercism.org/profiles/sambowden">Exercism</a>
 
 		<p>Feel free to contact me at:
-		<a href="mailto:samuel.bowden1@protonmail.com">samuel.bowden1@protonmail.com</a>
+		<a href="mailto:samuel.bowden@tutanota.com">samuel.bowden@tutanota.com</a>
 		</p>
 	</div>
 	<div class="column posts">
 		<h1>Posts</h1>
 		{% set section = get_section(path="posts/_index.md") %}
 		{% for post in section.pages %}
-			<div class="post">
+			<div>
 				{{ post.date }}<br>
 				<a href="{{ post.permalink | safe }}">{{ post.title }}</a></p>
 			</div>
