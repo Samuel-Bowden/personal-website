@@ -4,7 +4,7 @@
 
 {% block content %}
 	<div class="column profile">
-		<h1>Sam Bowden</h1>
+		<h1>Samuel Bowden</h1>
 
 		<img src="profile.png" class="profile_picture"\>
 
@@ -17,13 +17,14 @@
 		</p>
 
 		<h2>Links</h2>
-		<a href="https://github.com/Sam-Bowden">GitHub</a>
-		<a href="https://codeberg.org/Sam-Bowden">Codeberg</a>
+		<a href="https://github.com/Samuel-Bowden">GitHub</a>
+		<a href="https://codeberg.org/Samuel-Bowden">Codeberg</a>
 		<a href="https://exercism.org/profiles/sambowden">Exercism</a>
 
-		<p>Feel free to contact me at:
-		<a href="mailto:samuel.bowden@tutanota.com">samuel.bowden@tutanota.com</a>
-		</p>
+        <p>
+            Feel free to contact me at:
+            <a href="mailto:mail@samuelbowden.com">mail@samuelbowden.com</a>
+        </p>
 	</div>
 	<div class="column posts">
 		<h1>Posts</h1>
@@ -34,5 +35,8 @@
 				<a href="{{ post.permalink | safe }}">{{ post.title }}</a></p>
 			</div>
 		{% endfor %}
+
+		<h1>Games</h1>
+        <p>TBD</p>
 	</div>
 {% endblock content %}

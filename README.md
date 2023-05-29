@@ -1,5 +1,5 @@
-# blog_site
+# personal_website
 
-The source code for my blog site, which is built using Zola.
+The source code for my personal website, which is built using Zola.
 
-https://sambowden.rocks.
+https://samuelbowden.com
