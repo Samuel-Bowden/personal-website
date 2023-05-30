@@ -3,40 +3,48 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-	<div class="column profile">
-		<h1>Samuel Bowden</h1>
+    <div class="container">
+        <div class="row">
+            <div class="column profile">
+                <h1>Samuel Bowden</h1>
 
-		<img src="profile.png" class="profile_picture"\>
+                <img src="profile.png" class="profile_picture"\>
 
-		<h2>About me</h2>
+                <h2>About me</h2>
 
-		<p>I'm currently a 3rd year computer science student at the University of Leicester.
-		I'm passionate about FOSS, Linux and programming language theory.
-		For my final year project at university,
-		I'm developing an interpreter in Rust for a novel scripting language, Zonkey.
-		</p>
+                <p>I'm currently a 3rd year computer science student at the University of Leicester.
+                I'm passionate about FOSS, Linux and programming language theory.
+                For my final year project at university,
+                I'm developing an interpreter in Rust for a novel scripting language, Zonkey.
+                </p>
 
-		<h2>Links</h2>
-		<a href="https://github.com/Samuel-Bowden">GitHub</a>
-		<a href="https://codeberg.org/Samuel-Bowden">Codeberg</a>
-		<a href="https://exercism.org/profiles/sambowden">Exercism</a>
+                <h2>Links</h2>
+                <a href="https://github.com/Samuel-Bowden">GitHub</a>
+                <a href="https://codeberg.org/Samuel-Bowden">Codeberg</a>
+                <a href="https://exercism.org/profiles/sambowden">Exercism</a>
 
-        <p>
-            Feel free to contact me at:
-            <a href="mailto:mail@samuelbowden.com">mail@samuelbowden.com</a>
-        </p>
-	</div>
-	<div class="column posts">
-		<h1>Posts</h1>
-		{% set section = get_section(path="posts/_index.md") %}
-		{% for post in section.pages %}
-			<div>
-				{{ post.date }}<br>
-				<a href="{{ post.permalink | safe }}">{{ post.title }}</a></p>
-			</div>
-		{% endfor %}
+                <p>
+                    Feel free to contact me at:
+                    <a href="mailto:mail@samuelbowden.com">mail@samuelbowden.com</a>
+                </p>
+            </div>
+            <div class="column posts">
+                <h1>Posts</h1>
+                {% set section = get_section(path="posts/_index.md") %}
+                {% for post in section.pages %}
+                    <div>
+                        {{ post.date }}<br>
+                        <a href="{{ post.permalink | safe }}">{{ post.title }}</a></p>
+                    </div>
+                {% endfor %}
 
-		<h1>Games</h1>
-        <p>TBD</p>
-	</div>
+                <h1>Games</h1>
+                <a href="/games/drone-game/">Drone Game</a>
+            </div>
+        </div>
+        <footer class="row">
+            <p>Source code of website available
+            <a href="https://github.com/Samuel-Bowden/personal_website">here</a>.</p>
+        </div>
+    </div>
 {% endblock content %}

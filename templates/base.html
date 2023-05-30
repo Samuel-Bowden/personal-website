@@ -6,17 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{% block title %}{% endblock title %} - Samuel Bowden</title>
 		<link rel="stylesheet" href="{{ get_url(path="style.css") }}"/>
-		<link rel="icon" type="image/x-icon" href="profile.png">
+		<link rel="icon" type="image/x-icon" href="/profile.png">
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				{% block content %}{% endblock content %}
-			</div>
-			<footer class="row">
-				<p>Source code of website available
-				<a href="https://github.com/Samuel-Bowden/personal_website">here</a>.</p>
-			</div>
-		</div>
+        {% block content %}{% endblock content %}
 	</body>
 </html>

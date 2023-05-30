@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% endblock title %}
+
+{% block content %}
+    <div class="intro">
+        <a href="/">Return to home page</a>
+    </div>
+
+    <div class="intro">
+        <a href="https://github.com/Samuel-Bowden/drone_game">Source Code</a></p>
+    </div>
+
+    <script type="module">
+        import init from '/games/drone-game/bin/drone_game.js';
+        init('/games/drone-game/bin/drone_game_bg.wasm');
+    </script>
+{% endblock content %}
