@@ -3,12 +3,18 @@
 {% block title %}{{ page.title }}{% endblock title %}
 
 {% block content %}
-	<div class="column">
-		<h1>{{ page.title }}</h1>
-		<div class="intro">
-			{{ page.date }}<br>
-			<a href="/">Return to home page</a>
-		</div>
-		{{ page.content | safe }}
-	</div>
+    <div class="container">
+        <div class="column">
+            <h1>{{ page.title }}</h1>
+            <div class="intro">
+                {{ page.date }}<br>
+                <a href="/">Return to home page</a>
+            </div>
+            {{ page.content | safe }}
+        </div>
+    </div>
+    <footer class="row">
+        <p>Source code of website available
+        <a href="https://github.com/Samuel-Bowden/personal-website">here</a>.</p>
+    </footer>
 {% endblock content %}

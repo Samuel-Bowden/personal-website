@@ -8,11 +8,15 @@
     </div>
 
     <div class="intro">
-        <a href="https://github.com/Samuel-Bowden/drone_game">Source Code</a></p>
+        <a href="https://github.com/Samuel-Bowden/{{ page.extra.name }}">Source Code</a></p>
+    </div>
+
+    <div id="loading">
+        Loading. Please wait...
     </div>
 
     <script type="module">
-        import init from '/games/drone-game/bin/drone_game.js';
-        init('/games/drone-game/bin/drone_game_bg.wasm');
+        import init from '/games/{{ page.extra.name }}/bin/{{ page.extra.name }}.js';
+        init('/games/{{ page.extra.name }}/bin/{{ page.extra.name }}_bg.wasm');
     </script>
 {% endblock content %}

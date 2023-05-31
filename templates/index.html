@@ -28,7 +28,7 @@
                     <a href="mailto:mail@samuelbowden.com">mail@samuelbowden.com</a>
                 </p>
             </div>
-            <div class="column posts">
+            <div class="column posts_games">
                 <h1>Posts</h1>
                 {% set section = get_section(path="posts/_index.md") %}
                 {% for post in section.pages %}
@@ -39,12 +39,17 @@
                 {% endfor %}
 
                 <h1>Games</h1>
-                <a href="/games/drone-game/">Drone Game</a>
+                {% set section = get_section(path="games/_index.md") %}
+                {% for game in section.pages %}
+                    <div>
+                        <a href="{{ game.permalink | safe }}">{{ game.title }}</a></p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <footer class="row">
             <p>Source code of website available
-            <a href="https://github.com/Samuel-Bowden/personal_website">here</a>.</p>
-        </div>
+            <a href="https://github.com/Samuel-Bowden/personal-website">here</a>.</p>
+        </footer>
     </div>
 {% endblock content %}
